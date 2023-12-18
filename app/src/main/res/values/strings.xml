@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">SHOnlineShop</string>
+
+    // Get Start
+    <string name="get_1">S.H</string>
+    <string name="get_2">Online Shop</string>
+    // Home
+
+    <string name="home_1">Home</string>
+    <string name="home_2">Category</string>
+    <string name="home_3">Favorites</string>
+    <string name="home_4">Best selling</string>
+
+    // categories
+
+    <string name="cate_1">All</string>
+    <string name="cate_2">Home Decoration</string>
+    <string name="cate_3">Curtain</string>
+    <string name="cate_4">Sticky Paper wall</string>
+    <string name="cate_5">Spices</string>
+    <string name="cate_6">Ascending price</string>
+    <string name="cate_7">Filters</string>
+
+    // Detail product
+
+    <string name="pro_1">Price</string>
+    <string name="pro_2">Quantity</string>
+    <string name="pro_3">Delivery</string>
+    <string name="pro_4">Size</string>
+    <string name="pro_5">Description</string>
+    <string name="des_1"></string>
+    <string name="des_2"></string>
+
+    // Search
+
+    <string name="search_1">Search</string>
+    <string name="search_2">Search....</string>
+    <string name="search_3">Last viewed</string>
+    <string name="search_4">Latest search</string>
+    <string name="search_5">Clean all history</string>
+    // Checkout
+
+    <string name="check_1">Checkout</string>
+    <string name="check_2">Delivery</string>
+    <string name="check_3">Location</string>
+    <string name="check_4">Payment</string>
+    <string name="check_5">Total</string>
+    <string name="check_6">Enter a discount code</string>
+
+    // Payment method
+
+    <string name="pay_1">Card Number</string>
+    <string name="pay_2">Valid Date</string>
+    <string name="pay_3">CVV</string>
+    <string name="pay_4">Card Name</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    // Account
+</resources>
