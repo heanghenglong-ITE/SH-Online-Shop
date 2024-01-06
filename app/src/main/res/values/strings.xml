@@ -44,9 +44,13 @@
     <string name="check_1">Checkout</string>
     <string name="check_2">Delivery</string>
     <string name="check_3">Location</string>
-    <string name="check_4">Payment</string>
+    <string name="check_4">Payment Method</string>
     <string name="check_5">Total</string>
     <string name="check_6">Enter a discount code</string>
+    <string name="check_7">Delivery will there on 3 day</string>
+    <string name="check_8">Pay</string>
+    <string name="check_9">Payment</string>
+    <string name="check_10">Select for Delivery</string>
 
     // Payment method
 
@@ -64,4 +68,7 @@
     <string name="new_user_register_now">New user? Register Now</string>
     <string name="already_have_account">Already Have Account? Login</string>
     <string name="or_login_with">or login with</string>
+
+    // product name
+    <string name="white_curtain">white Curtain</string>
 </resources>
