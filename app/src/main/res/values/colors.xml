@@ -9,5 +9,7 @@
     <color name="colorPrimaryDark">#2A2E43</color>
     <color name="colorAccent">#FF402D</color>
 
-    <color name="color_home">#EFF5FB</color>
+    <color name="color_home">#7a91e3</color>
+
+    <color name="fe_rupp">#014164</color>
 </resources>
