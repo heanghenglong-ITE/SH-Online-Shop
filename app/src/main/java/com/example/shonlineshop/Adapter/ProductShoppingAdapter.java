@@ -31,11 +31,14 @@ public class ProductShoppingAdapter extends RecyclerView.Adapter<ProductShopping
 
     @Override
     public void onBindViewHolder(@NonNull ProductShoppingAdapter.ViewHolder holder, int position) {
-        holder.productName.setText(items.get(position).getProductName());
-        holder.productPrice.setText(items.get(position).getProductPrice());
 
-        int drawableResourceId = holder.itemView.getResources().getIdentifier(items.get(position).getImageUrl()
-        ,"drawable",holder.itemView.getContext().getPackageName());
+        ShoppingDomain shoppingDomain = items.get(position);
+
+        holder.productName.setText(shoppingDomain.getProductName());
+        holder.productPrice.setText(shoppingDomain.getProductPrice());
+
+        int drawableResourceId = holder.itemView.getResources().getIdentifier(shoppingDomain.getImageUrl()
+        ,"drawable", holder.itemView.getContext().getPackageName());
 
         Glide.with(holder.itemView.getContext())
                 .load(drawableResourceId)
@@ -55,7 +58,7 @@ public class ProductShoppingAdapter extends RecyclerView.Adapter<ProductShopping
             super(itemView);
             productName = itemView.findViewById(R.id.productName);
             productPrice = itemView.findViewById(R.id.productPrice);
-            imageView = itemView.findViewById(R.id.imageView);
+            imageView = itemView.findViewById(R.id.imageView_shopping);
         }
     }
 }

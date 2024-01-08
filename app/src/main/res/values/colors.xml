@@ -10,6 +10,11 @@
     <color name="colorPrimaryDark">#2A2E43</color>
     <color name="colorAccent">#FF402D</color>
 
+    <color name="colorPrimary1">#607D8B</color>
+    <color name="colorPrimaryDark1">#455A64</color>
+    <color name="colorAccent1">#4CAF50</color>
+
+
     <color name="color_home">#7a91e3</color>
 
     <color name="fe_rupp">#014164</color>
