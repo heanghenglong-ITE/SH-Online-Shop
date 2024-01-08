@@ -1,14 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingConstraints"
     tools:context=".fragment.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home" />
+        android:layout_height="wrap_content"
+        android:id="@+id/LinearHome">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/Rela"
+        app:layout_constraintTop_toBottomOf="@id/LinearHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Rela">
+
+        <RelativeLayout
+            android:id="@+id/Rela1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@color/black"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Rela2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@color/blue"/>
+        </RelativeLayout>
+        
+    </LinearLayout>
+        
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
