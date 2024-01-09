@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.shonlineshop.Adapter.ProductShoppingAdapter;
@@ -35,7 +36,15 @@ public class ShoppingCartFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_shopping_cart, container, false);
 
         TextView textView = rootView.findViewById(R.id.payment_textview);
+        ImageView imageViewClick = rootView.findViewById(R.id.imageview_click);
 
+        imageViewClick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), PaymentMethodActivity.class);
+                startActivity(intent);
+            }
+        });
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

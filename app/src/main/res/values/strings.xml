@@ -48,9 +48,10 @@
     <string name="check_5">Total</string>
     <string name="check_6">Enter a discount code</string>
     <string name="check_7">Delivery will there on 3 day</string>
-    <string name="check_8">Pay</string>
+    <string name="check_8">Add payment</string>
     <string name="check_9">Payment</string>
     <string name="check_10">Select for Delivery</string>
+    <string name="check_11">Pay Now</string>
 
     // Payment method
 
@@ -71,4 +72,14 @@
 
     // product name
     <string name="white_curtain">white Curtain</string>
+
+
+    <string name="acc_1">Account</string>
+    <string name="acc_2">Username</string>
+    <string name="acc_3">Username@gmail.com</string>
+    <string name="acc_4">Order information</string>
+    <string name="acc_5">Account information</string>
+    <string name="acc_6">Interest</string>
+    <string name="acc_7">Contact us</string>
+    <string name="acc_8">About us</string>
 </resources>

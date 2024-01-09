@@ -97,10 +97,12 @@
                     android:text="@string/check_9"
                     android:textColor="@color/blue"
                     android:textSize="18sp" />
+
                 <ImageView
+                    android:id="@+id/imageview_click"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/arrow_down"/>
+                    android:src="@drawable/arrow_down" />
 
 
             </LinearLayout>
@@ -150,7 +152,7 @@
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/check_8"
+                    android:text="@string/check_11"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
