@@ -82,4 +82,6 @@
     <string name="acc_6">Interest</string>
     <string name="acc_7">Contact us</string>
     <string name="acc_8">About us</string>
+
+    <string name="order_1">Order Information</string>
 </resources>

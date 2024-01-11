@@ -1,5 +1,7 @@
 package com.example.shonlineshop.fragment;
 
+import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,60 +9,78 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.example.shonlineshop.R;
+import com.example.shonlineshop.activity.AboutUsActivity;
+import com.example.shonlineshop.activity.AccountInformationActivity;
+import com.example.shonlineshop.activity.ContactUsActivity;
+import com.example.shonlineshop.activity.LoginActivity;
+import com.example.shonlineshop.activity.OrderInformationActivity;
+import com.example.shonlineshop.databinding.FragmentAccountBinding;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link AccountFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class AccountFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public AccountFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment AccountFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static AccountFragment newInstance(String param1, String param2) {
-        AccountFragment fragment = new AccountFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
+    private FragmentAccountBinding binding;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_account, container, false);
+        binding = FragmentAccountBinding.inflate(inflater, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_account, container, false);
+
+        ImageView imageViewClickOrder = rootView.findViewById(R.id.order_click);
+        ImageView imageViewClickAccInfo = rootView.findViewById(R.id.account_click);
+        ImageView imageViewClickInterest = rootView.findViewById(R.id.interest_click);
+        ImageView imageViewClickContact = rootView.findViewById(R.id.contact_click);
+        ImageView imageViewClickAbout = rootView.findViewById(R.id.about_click);
+        ImageView imageViewClickLogout = rootView.findViewById(R.id.logout_click);
+
+        imageViewClickOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), OrderInformationActivity.class);
+                startActivity(intent);
+            }
+        });
+        imageViewClickAccInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AccountInformationActivity.class);
+                startActivity(intent);
+            }
+        });
+        imageViewClickInterest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AccountInformationActivity.class);
+                startActivity(intent);
+            }
+        });
+        imageViewClickContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ContactUsActivity.class);
+                startActivity(intent);
+            }
+        });
+        imageViewClickAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AboutUsActivity.class);
+                startActivity(intent);
+            }
+        });
+        imageViewClickLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        return rootView;
+
+
     }
 }
