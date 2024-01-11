@@ -82,6 +82,13 @@
     <string name="acc_6">Interest</string>
     <string name="acc_7">Contact us</string>
     <string name="acc_8">About us</string>
+    <string name="acc_9">Email</string>
+    <string name="acc_10">Phone</string>
+    <string name="acc_11">Password</string>
+    <string name="acc_12">Change</string>
+    <string name="acc_13">+855 00 000 000</string>
+    <string name="acc_14">********</string>
 
     <string name="order_1">Order Information</string>
+
 </resources>
