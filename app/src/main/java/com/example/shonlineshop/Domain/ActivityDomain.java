@@ -5,7 +5,7 @@ public class ActivityDomain {
     private int id;
     private String name;
     private String price;
-    private String dicount;
+    private String discount;
     private String afterprice;
     private String imageUrl;
     private String quantity;
@@ -14,11 +14,11 @@ public class ActivityDomain {
     private String description;
     private String category;
 
-    public ActivityDomain(int id, String name, String price, String dicount, String afterprice, String imageUrl, String quantity, String delivery, String size, String description, String category) {
+    public ActivityDomain(int id, String name, String price, String discount, String afterprice, String imageUrl, String quantity, String delivery, String size, String description, String category) {
         this.id = id;
         this.name = name;
         this.price = price;
-        this.dicount = dicount;
+        this.discount = discount;
         this.afterprice = afterprice;
         this.imageUrl = imageUrl;
         this.quantity = quantity;
@@ -52,12 +52,12 @@ public class ActivityDomain {
         this.price = price;
     }
 
-    public String getDicount() {
-        return dicount;
+    public String getDiscount() {
+        return discount;
     }
 
-    public void setDicount(String dicount) {
-        this.dicount = dicount;
+    public void setDiscount(String dicount) {
+        this.discount = dicount;
     }
 
     public String getAfterprice() {
