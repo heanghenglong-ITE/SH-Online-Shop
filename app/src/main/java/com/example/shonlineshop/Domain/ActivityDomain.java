@@ -8,21 +8,17 @@ public class ActivityDomain {
     private String discount;
     private String afterprice;
     private String imageUrl;
-    private String quantity;
-    private String delivery;
     private String size;
     private String description;
     private String category;
 
-    public ActivityDomain(int id, String name, String price, String discount, String afterprice, String imageUrl, String quantity, String delivery, String size, String description, String category) {
+    public ActivityDomain(int id, String name, String price, String discount, String afterprice, String imageUrl, String size, String description, String category) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.discount = discount;
         this.afterprice = afterprice;
         this.imageUrl = imageUrl;
-        this.quantity = quantity;
-        this.delivery = delivery;
         this.size = size;
         this.description = description;
         this.category = category;
@@ -76,21 +72,6 @@ public class ActivityDomain {
         this.imageUrl = imageUrl;
     }
 
-    public String getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(String quantity) {
-        this.quantity = quantity;
-    }
-
-    public String getDelivery() {
-        return delivery;
-    }
-
-    public void setDelivery(String delivery) {
-        this.delivery = delivery;
-    }
 
     public String getSize() {
         return size;

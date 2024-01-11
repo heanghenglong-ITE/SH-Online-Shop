@@ -1,5 +1,6 @@
 package com.example.shonlineshop.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.shonlineshop.Adapter.HomeAdapter;
 import com.example.shonlineshop.Domain.ActivityDomain;
 import com.example.shonlineshop.R;
+import com.example.shonlineshop.activity.DetailActivity;
 import com.example.shonlineshop.api.ApiService;
 
 import java.util.ArrayList;
@@ -53,6 +55,14 @@ public class HomeFragment extends Fragment {
 
     private void openDetailView(ActivityDomain activityDomain) {
         // Implement your logic for opening the detail view
+        Intent intent = new Intent(getActivity(), DetailActivity.class);
+        intent.putExtra("itemId", activityDomain.getId());
+        intent.putExtra("itemName", activityDomain.getName());
+        intent.putExtra("imageUrl", activityDomain.getImageUrl());
+        intent.putExtra("itemPrice", activityDomain.getPrice());
+        intent.putExtra("itemSize", activityDomain.getSize());
+        intent.putExtra("itemDescription", activityDomain.getDescription());
+        startActivity(intent);
     }
 
     private void makeApiRequest(String category) {
