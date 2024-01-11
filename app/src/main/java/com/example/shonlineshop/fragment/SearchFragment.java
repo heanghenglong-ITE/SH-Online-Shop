@@ -16,7 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.shonlineshop.Adapter.HomeAdapter;
+import com.example.shonlineshop.Adapter.SearchAdapter;
 import com.example.shonlineshop.Domain.ActivityDomain;
 import com.example.shonlineshop.R;
 import com.example.shonlineshop.activity.DetailActivity;
@@ -35,7 +35,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class SearchFragment extends Fragment {
 
     private RecyclerView recyclerView;
-    private HomeAdapter adapter;
+    private SearchAdapter adapter;
     private List<ActivityDomain> originalActivityDomain;
 
 
@@ -47,7 +47,7 @@ public class SearchFragment extends Fragment {
 
         recyclerView = rootView.findViewById(R.id.RecyclerViewSearch);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
-        adapter = new HomeAdapter(getActivity(), new ArrayList<>());
+        adapter = new SearchAdapter(getActivity(), new ArrayList<>());
         recyclerView.setAdapter(adapter);
         SearchView searchView = rootView.findViewById(R.id.searchView);
 

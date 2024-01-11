@@ -12,12 +12,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.shonlineshop.R;
+import com.example.shonlineshop.fragment.ShoppingCartFragment;
 import com.squareup.picasso.Picasso;
 
 public class DetailActivity extends AppCompatActivity {
 
     private TextView TextView;
-    private Button moreButton;
+    private Button moreButton, btnAddCart;
 
     private boolean isTextExpanded = false;
 
@@ -28,6 +29,16 @@ public class DetailActivity extends AppCompatActivity {
 
         TextView = findViewById(R.id.TextDescription);
         moreButton = findViewById(R.id.moreButton);
+        btnAddCart = findViewById(R.id.BtnAddCart);
+
+        btnAddCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Assuming PaymentMethodActivity is an activity in your project
+                Intent intent = new Intent(DetailActivity.this, PaymentMethodActivity.class);
+                startActivity(intent);
+            }
+        });
 
         String initialText = "Your initial text here";
         TextView.setText(initialText);
@@ -49,6 +60,7 @@ public class DetailActivity extends AppCompatActivity {
                 isTextExpanded = !isTextExpanded;
             }
         });
+
 
         ImageButton BackBotton = findViewById(R.id.BackButton);
 

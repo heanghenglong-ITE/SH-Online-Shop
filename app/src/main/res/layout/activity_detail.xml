@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:ignore="TouchTargetSizeCheck"
     tools:context=".activity.DetailActivity">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,16 +14,18 @@
         android:orientation="horizontal">
         <RelativeLayout
             android:id="@+id/Rela1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
 
             <ImageButton
                 android:id="@+id/BackButton"
                 android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/left_arrow_icon"
+                android:layout_height="35dp"
+                android:background="@drawable/left_arrow_icon1"
                 android:contentDescription="Back Button"
-                tools:ignore="TouchTargetSizeCheck" />
+                android:layout_centerInParent="true"
+                android:layout_alignParentStart="true"
+                android:padding="8dp" />
 
 
             <ImageView
@@ -47,18 +50,21 @@
                 android:textSize="25sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
+
             <ImageView
                 android:id="@+id/ImageDetail"
-                android:layout_below="@id/TextName"
                 android:layout_width="match_parent"
                 android:layout_height="240dp"
-                android:scaleType="fitXY"
-                android:background="@drawable/img3"
+                android:layout_below="@id/TextName"
                 android:layout_marginHorizontal="15dp"
-                android:layout_marginVertical="10dp"/>
+                android:layout_marginVertical="10dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/img3"
+                android:scaleType="fitXY" />
 
         </RelativeLayout>
         <RelativeLayout
+            android:id="@+id/Rela3"
             android:layout_below="@id/Rela2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -230,6 +236,44 @@
 
 
         </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/Rela3">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="5dp"
+                app:cardCornerRadius="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add to cart"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="25sp"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"/>
+                    <Button
+                        android:id="@+id/BtnAddCart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#00000000"
+                        android:contentDescription="Add to Cart Button"
+                        />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
 
     </RelativeLayout>
 
