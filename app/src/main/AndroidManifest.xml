@@ -16,6 +16,24 @@
         android:theme="@style/Theme.SHOnlineShop"
         tools:targetApi="31">
         <activity
+            android:name=".activity.SpicesCateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.StickyPaperWallCateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CurtainCateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.HomeDecorationCateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AllCateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CategoriesActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.DetailActivity"
             android:exported="false" />
         <activity

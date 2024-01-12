@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingConstraints"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="8dp"
+    tools:context=".activity.AllCateActivity">
+
+    <RelativeLayout
+        android:id="@+id/Rela1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/BackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/left_arrow_icon" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/BackButton"
+            android:text="All"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Rela1"
+        android:id="@+id/Linear"
+        android:layout_marginTop="8dp">
+        <RelativeLayout
+            android:id="@+id/rela1"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:background="@drawable/background1">
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black"
+                android:text="Ascending price"/>
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="9dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/text1"
+                android:background="@drawable/ic_up_arrow" />
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="18dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/arrow_down" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_toEndOf="@id/rela1"
+            android:layout_marginStart="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp">
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black"
+                android:text="Filters"/>
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="18dp"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@id/text2"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/arrow_down" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp">
+
+            <ImageView
+                android:id="@+id/ChangeLinear"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/ic_category" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerView"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Linear"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

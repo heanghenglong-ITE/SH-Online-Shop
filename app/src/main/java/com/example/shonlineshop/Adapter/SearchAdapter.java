@@ -98,4 +98,9 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
     public interface OnItemClickListener {
         void onItemClick(ActivityDomain activityDomain);
     }
+    public void setDisplayMode(boolean isGridLayout) {
+        // Implement the logic to handle the display mode (if needed)
+        notifyDataSetChanged(); // Refresh the adapter after updating the display mode
+    }
+
 }

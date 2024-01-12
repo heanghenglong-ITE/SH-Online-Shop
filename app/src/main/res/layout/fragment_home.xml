@@ -38,7 +38,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/viewPager"
             android:id="@+id/Linear"
-            android:layout_marginTop="15dp"
             android:gravity="center">
 
             <RelativeLayout
@@ -52,11 +51,12 @@
                     android:layout_height="60dp"
                     android:layout_centerInParent="true"
                     android:background="@drawable/btn_cat_background" />
+
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="30dp"
                     android:layout_centerInParent="true"
-                    android:background="@drawable/img_14"/>
+                    android:background="@drawable/img_14" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingConstraints"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="8dp"
+    tools:context=".activity.CategoriesActivity">
+
+    <RelativeLayout
+        android:id="@+id/Rela1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/BackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/left_arrow_icon" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/BackButton"
+            android:text="Categories"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="8dp"
+        android:id="@+id/BtnAll"
+        app:layout_constraintTop_toBottomOf="@id/Rela1"
+        android:background="@drawable/rounded_background">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="30dp"
+            android:text="All"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/right_arrow_icon"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="8dp"
+        android:id="@+id/BtnHomeDecoration"
+        app:layout_constraintTop_toBottomOf="@id/BtnAll"
+        android:background="@drawable/rounded_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="30dp"
+            android:text="Home Decoration"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/right_arrow_icon"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="8dp"
+        android:id="@+id/BtnCurtain"
+        app:layout_constraintTop_toBottomOf="@id/BtnHomeDecoration"
+        android:background="@drawable/rounded_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="30dp"
+            android:text="Curtain"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/right_arrow_icon"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="8dp"
+        android:id="@+id/BtnStickyPaperWall"
+        app:layout_constraintTop_toBottomOf="@id/BtnCurtain"
+        android:background="@drawable/rounded_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="30dp"
+            android:text="Sticky Paper Wall"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/right_arrow_icon"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="8dp"
+        android:id="@+id/BtnSpices"
+        app:layout_constraintTop_toBottomOf="@id/BtnStickyPaperWall"
+        android:background="@drawable/rounded_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="30dp"
+            android:text="Spices"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/right_arrow_icon"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
