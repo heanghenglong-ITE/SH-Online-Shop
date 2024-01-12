@@ -8,9 +8,7 @@
     android:layout_marginVertical="4dp"
     tools:ignore="MissingConstraints"
     tools:context=".fragment.HomeFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/LinearHome">
@@ -22,184 +20,164 @@
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="35sp"/>
-
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/Linear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/LinearHome">
-
-        <RelativeLayout
-            android:id="@+id/RelaCate"
-            android:layout_width="85dp"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/image1"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_centerInParent="true"
-                android:background="@drawable/btn_cat_background" />
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="30dp"
-                android:layout_centerInParent="true"
-                android:background="@drawable/img_14"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Categories"
-                android:textSize="15sp"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/image1"
-                android:layout_marginTop="12dp"
-                android:textStyle="bold"
-                android:textColor="@color/blue"/>
-
-            <Button
-                android:id="@+id/btnCate"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_centerInParent="true"
-                android:background="#00000000"
-                tools:ignore="SpeakableTextPresentCheck" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/RelaFavor"
-            android:layout_width="85dp"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/image2"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_centerInParent="true"
-                android:background="@drawable/btn_cat_background" />
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="30dp"
-                android:layout_centerInParent="true"
-                android:background="@drawable/img_15"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Favorites"
-                android:textSize="15sp"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/image2"
-                android:layout_marginTop="12dp"
-                android:textStyle="bold"
-                android:textColor="@color/blue"/>
-
-            <Button
-                android:id="@+id/btnFavor"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_centerInParent="true"
-                android:background="#00000000"
-                tools:ignore="SpeakableTextPresentCheck" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/RelaGifts"
-            android:layout_width="85dp"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/image3"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_centerInParent="true"
-                android:background="@drawable/btn_cat_background" />
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="30dp"
-                android:layout_centerInParent="true"
-                android:background="@drawable/img_16"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Gifts"
-                android:textSize="15sp"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/image3"
-                android:layout_marginTop="12dp"
-                android:textStyle="bold"
-                android:textColor="@color/blue"/>
-
-            <Button
-                android:id="@+id/btnGifts"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_centerInParent="true"
-                android:background="#00000000"
-                tools:ignore="SpeakableTextPresentCheck" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/RelaBest"
-            android:layout_width="85dp"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/image4"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_centerInParent="true"
-                android:background="@drawable/btn_cat_background" />
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="30dp"
-                android:layout_centerInParent="true"
-                android:background="@drawable/img_17"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Best Selling"
-                android:textSize="15sp"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/image4"
-                android:layout_marginTop="12dp"
-                android:textStyle="bold"
-                android:textColor="@color/blue"/>
-
-            <Button
-                android:id="@+id/btnBest"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_centerInParent="true"
-                android:background="#00000000"
-                tools:ignore="SpeakableTextPresentCheck" />
-        </RelativeLayout>
-
-    </LinearLayout>
-    <RelativeLayout
-        android:id="@+id/RelaSale"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/Linear">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sales"
-            android:id="@+id/textsales"
-            android:layout_centerHorizontal="true"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
     </RelativeLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RecyclerView2"
+    <RelativeLayout
+        app:layout_constraintTop_toBottomOf="@id/LinearHome"
+        android:id="@+id/Rela1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        app:layout_constraintTop_toBottomOf="@id/RelaSale"
-        />
-        
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:id="@+id/Home1"
+            android:background="@drawable/img3"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Home1"
+            android:id="@+id/Linear"
+            android:layout_marginTop="15dp"
+            android:gravity="center">
 
+            <RelativeLayout
+                android:id="@+id/RelaCate"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/btnCate"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/btn_cat_background" />
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/img_14"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Categories"
+                    android:textSize="15sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/btnCate"
+                    android:layout_marginTop="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelaFavorit"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/btnFavorit"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/btn_cat_background" />
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/img_15"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Favorites"
+                    android:textSize="15sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/btnFavorit"
+                    android:layout_marginTop="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelaGifts"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/btnGifts"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/btn_cat_background" />
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/img_16"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gifts"
+                    android:textSize="15sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/btnGifts"
+                    android:layout_marginTop="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelaBest"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/btnBest"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/btn_cat_background" />
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/img_17"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Best Selling"
+                    android:textSize="15sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/btnBest"
+                    android:layout_marginTop="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/RelaSale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Linear">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Sales"
+                android:id="@+id/textsales"
+                android:layout_centerHorizontal="true"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RecyclerView2"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/textsales"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,14 +1,11 @@
 package com.example.shonlineshop.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.shonlineshop.R;
@@ -18,7 +15,9 @@ import com.squareup.picasso.Picasso;
 public class DetailActivity extends AppCompatActivity {
 
     private TextView TextView;
-    private Button moreButton, btnAddCart;
+    private Button moreButton;
+
+    private RelativeLayout btnAddCart;
 
     private boolean isTextExpanded = false;
 
@@ -34,11 +33,29 @@ public class DetailActivity extends AppCompatActivity {
         btnAddCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Assuming PaymentMethodActivity is an activity in your project
-                Intent intent = new Intent(DetailActivity.this, PaymentMethodActivity.class);
-                startActivity(intent);
+                // Hide other views
+                findViewById(R.id.Rela1).setVisibility(View.GONE);
+                findViewById(R.id.Rela2).setVisibility(View.GONE);
+                findViewById(R.id.Rela3).setVisibility(View.GONE);
+                findViewById(R.id.BtnAddCart).setVisibility(View.GONE);
+
+                // Show only the fragmentContainer
+                findViewById(R.id.fragmentContainer).setVisibility(View.VISIBLE);
+
+                // Assuming ShoppingCartFragment is the correct fragment for your shopping cart
+                ShoppingCartFragment shoppingCartFragment = new ShoppingCartFragment();
+
+                // Replace or add the ShoppingCartFragment to the current activity
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragmentContainer, shoppingCartFragment)
+                        .addToBackStack(null)
+                        .commit();
             }
         });
+
+
+
 
         String initialText = "Your initial text here";
         TextView.setText(initialText);
@@ -62,7 +79,7 @@ public class DetailActivity extends AppCompatActivity {
         });
 
 
-        ImageButton BackBotton = findViewById(R.id.BackButton);
+        ImageView BackBotton = findViewById(R.id.BackButton);
 
         BackBotton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,4 +109,17 @@ public class DetailActivity extends AppCompatActivity {
         detailTextDescription.setText(itemDescription);
 
     }
+    @Override
+    public void onBackPressed() {
+        if (findViewById(R.id.fragmentContainer).getVisibility() == View.VISIBLE) {
+            findViewById(R.id.fragmentContainer).setVisibility(View.GONE);
+            findViewById(R.id.Rela1).setVisibility(View.VISIBLE);
+            findViewById(R.id.Rela2).setVisibility(View.VISIBLE);
+            findViewById(R.id.Rela3).setVisibility(View.VISIBLE);
+            findViewById(R.id.BtnAddCart).setVisibility(View.VISIBLE);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
 }
