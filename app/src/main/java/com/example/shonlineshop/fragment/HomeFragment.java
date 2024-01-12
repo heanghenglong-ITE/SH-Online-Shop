@@ -12,8 +12,10 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.shonlineshop.Adapter.HomeAdapter;
+import com.example.shonlineshop.Adapter.ViewPagerAdapter;
 import com.example.shonlineshop.Domain.ActivityDomain;
 import com.example.shonlineshop.R;
 import com.example.shonlineshop.activity.DetailActivity;
@@ -35,23 +37,39 @@ public class HomeFragment extends Fragment {
     private HomeAdapter adapter;
     private List<ActivityDomain> originalActivityDomain;
 
+    private ViewPager viewPager;
+    private ViewPagerAdapter viewPagerAdapter;
+    private List<ActivityDomain> viewPagerData;
+
+    // Declare Retrofit as a class variable
+    private Retrofit httpClient = new Retrofit.Builder()
+            .baseUrl("https://tochhit.github.io/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build();
+
+    // Inside your HomeFragment
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
         recyclerView = rootView.findViewById(R.id.RecyclerView2);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         adapter = new HomeAdapter(getActivity(), new ArrayList<>());
         recyclerView.setAdapter(adapter);
-
         adapter.setOnItemClickListener(this::openDetailView);
 
+        viewPager = rootView.findViewById(R.id.viewPager);
+
+        // Use requireActivity() to get the FragmentActivity
+        viewPagerAdapter = new ViewPagerAdapter(requireActivity(), new ArrayList<>(), viewPager);
+        viewPager.setAdapter(viewPagerAdapter);
+
         makeApiRequest("all");
+        fetchViewPagerData();
 
         return rootView;
     }
+
 
     private void openDetailView(ActivityDomain activityDomain) {
         // Implement your logic for opening the detail view
@@ -66,14 +84,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void makeApiRequest(String category) {
-        Retrofit httpClient = new Retrofit.Builder()
-                .baseUrl("https://tochhit.github.io/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        // Create Service object
         ApiService apiService = httpClient.create(ApiService.class);
-
         Call<List<ActivityDomain>> call = apiService.GetHomeShShop();
 
         call.enqueue(new Callback<List<ActivityDomain>>() {
@@ -116,4 +127,38 @@ public class HomeFragment extends Fragment {
                 .filter(item -> category.equalsIgnoreCase(item.getCategory()))
                 .collect(Collectors.toList());
     }
+
+    private void fetchViewPagerData() {
+        ApiService apiService = httpClient.create(ApiService.class);
+        Call<List<ActivityDomain>> call = apiService.getViewPagerData();
+
+        call.enqueue(new Callback<List<ActivityDomain>>() {
+            @Override
+            public void onResponse(@NonNull Call<List<ActivityDomain>> call,
+                                   @NonNull Response<List<ActivityDomain>> response) {
+                if (response.isSuccessful()) {
+                    viewPagerData = response.body();
+                    if (viewPagerData != null && !viewPagerData.isEmpty()) {
+                        updateViewPager(viewPagerData);
+                    } else {
+                        Log.e("APIResponse", "Empty or null ViewPager response body");
+                    }
+                } else {
+                    Log.e("APIResponse", "Error fetching ViewPager data: " + response.message());
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<List<ActivityDomain>> call,
+                                  @NonNull Throwable t) {
+                Log.e("APIResponse", "Network error fetching ViewPager data: " + t.getMessage());
+            }
+        });
+    }
+
+    private void updateViewPager(List<ActivityDomain> viewPagerData) {
+        // Implement logic to update your ViewPager with the data
+        viewPagerAdapter.setData(viewPagerData);
+    }
+
 }

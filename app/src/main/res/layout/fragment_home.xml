@@ -26,15 +26,17 @@
         android:id="@+id/Rela1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <ImageView
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:id="@+id/Home1"
-            android:background="@drawable/img3"/>
+            android:layout_marginTop="8dp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/Home1"
+            android:layout_below="@id/viewPager"
             android:id="@+id/Linear"
             android:layout_marginTop="15dp"
             android:gravity="center">

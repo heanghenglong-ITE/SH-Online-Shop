@@ -10,5 +10,8 @@ import retrofit2.http.GET;
 public interface ApiService {
     @GET("host_api/SH-Shop.json")
     Call<List<ActivityDomain>> GetHomeShShop();
+
+    @GET("host_api/SH-Shop.json")
+    Call<List<ActivityDomain>> getViewPagerData();
 }
 
