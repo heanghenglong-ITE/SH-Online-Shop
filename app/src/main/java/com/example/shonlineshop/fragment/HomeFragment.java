@@ -100,7 +100,7 @@
 
         private void makeApiRequest(String category) {
             ApiService apiService = httpClient.create(ApiService.class);
-            Call<List<ActivityDomain>> call = apiService.GetHomeShShop();
+            Call<List<ActivityDomain>> call = apiService.GetShShop2();
 
             call.enqueue(new Callback<List<ActivityDomain>>() {
                 @Override
@@ -145,7 +145,7 @@
 
         private void fetchViewPagerData() {
             ApiService apiService = httpClient.create(ApiService.class);
-            Call<List<ActivityDomain>> call = apiService.getViewPagerData();
+            Call<List<ActivityDomain>> call = apiService.GetShShop3();
 
             call.enqueue(new Callback<List<ActivityDomain>>() {
                 @Override

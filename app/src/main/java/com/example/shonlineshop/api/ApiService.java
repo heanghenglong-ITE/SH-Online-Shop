@@ -11,7 +11,10 @@ public interface ApiService {
     @GET("host_api/SH-Shop.json")
     Call<List<ActivityDomain>> GetHomeShShop();
 
-    @GET("host_api/SH-Shop.json")
-    Call<List<ActivityDomain>> getViewPagerData();
+    @GET("host_api/Sh-Shop2.json")
+    Call<List<ActivityDomain>> GetShShop2();
+
+    @GET("host_api/Sh-Shop3.json")
+    Call<List<ActivityDomain>> GetShShop3();
 }
 

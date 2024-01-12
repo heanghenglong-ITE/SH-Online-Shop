@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.shonlineshop.Adapter.HomeAdapter;
-import com.example.shonlineshop.Adapter.SearchAdapter;
+import com.example.shonlineshop.Adapter.Product1Adapter;
+import com.example.shonlineshop.Adapter.Product2Adapter;
 import com.example.shonlineshop.Domain.ActivityDomain;
 import com.example.shonlineshop.R;
 import com.example.shonlineshop.api.ApiService;
@@ -31,10 +31,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class AllCateActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private HomeAdapter homeAdapter;
-    private SearchAdapter searchAdapter;
+    private Product1Adapter product1Adapter;
+    private Product2Adapter product2Adapter;
     private List<ActivityDomain> originalActivityDomain;
-    private boolean isGridLayout = true; // Flag to track the current layout manager type
+    private boolean isGridLayout = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +43,12 @@ public class AllCateActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.RecyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        homeAdapter = new HomeAdapter(this, new ArrayList<>()); // Default to HomeAdapter
-        searchAdapter = new SearchAdapter(this, new ArrayList<>()); // Default to SearchAdapter
-        recyclerView.setAdapter(homeAdapter);
+        product1Adapter = new Product1Adapter(this, new ArrayList<>()); // Default to product1Adapter
+        product2Adapter = new Product2Adapter(this, new ArrayList<>()); // Default to product2Adapter
+        recyclerView.setAdapter(product1Adapter);
 
-        // Set item click listener for HomeAdapter
-        homeAdapter.setOnItemClickListener(this::openDetailView);
+        // Set item click listener for product1Adapter
+        product1Adapter.setOnItemClickListener(this::openDetailView);
 
         ImageView changeLinearImageView = findViewById(R.id.ChangeLinear);
         changeLinearImageView.setOnClickListener(view -> toggleLayoutManager());
@@ -88,18 +88,18 @@ public class AllCateActivity extends AppCompatActivity {
                     if (activityDomain != null && !activityDomain.isEmpty()) {
                         originalActivityDomain = new ArrayList<>(activityDomain);
                         if ("all".equals(category)) {
-                            // Use the current adapter type (HomeAdapter or SearchAdapter)
+                            // Use the current adapter type (product1Adapter or product2Adapter)
                             if (isGridLayout) {
-                                homeAdapter.setData(activityDomain);
+                                product1Adapter.setData(activityDomain);
                             } else {
-                                searchAdapter.setData(activityDomain);
+                                product2Adapter.setData(activityDomain);
                             }
                         } else {
                             List<ActivityDomain> filteredList = filterByActivity(activityDomain, category);
                             if (isGridLayout) {
-                                homeAdapter.setData(filteredList);
+                                product1Adapter.setData(filteredList);
                             } else {
-                                searchAdapter.setData(filteredList);
+                                product2Adapter.setData(filteredList);
                             }
                         }
                     } else {
@@ -131,12 +131,12 @@ public class AllCateActivity extends AppCompatActivity {
 
         if (isGridLayout) {
             layoutManager = new LinearLayoutManager(this);
-            recyclerView.setAdapter(searchAdapter);
-            searchAdapter.setOnItemClickListener(this::openDetailView);
+            recyclerView.setAdapter(product2Adapter);
+            product2Adapter.setOnItemClickListener(this::openDetailView);
         } else {
             layoutManager = new GridLayoutManager(this, 2);
-            recyclerView.setAdapter(homeAdapter);
-            homeAdapter.setOnItemClickListener(this::openDetailView);
+            recyclerView.setAdapter(product1Adapter);
+            product1Adapter.setOnItemClickListener(this::openDetailView);
         }
 
         recyclerView.setLayoutManager(layoutManager);
