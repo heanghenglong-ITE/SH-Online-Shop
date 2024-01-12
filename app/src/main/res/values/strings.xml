@@ -91,4 +91,20 @@
 
     <string name="order_1">Order Information</string>
 
+
+    <string-array name="delivery">
+        <item>Select Delivery</item>
+        <item>J&amp;T Express Cambodia</item>
+        <item>VAT Express Cambodia</item>
+        <item>CJ Express Cambodia</item>
+        <item>DHL Cambodia</item>
+        <item>FedEx Cambodia</item>
+        <item>UPS Cambodia</item>
+        <item>EMS Cambodia</item>
+        <item>Cambodia Post</item>
+        <item>GDEX Cambodia</item>
+        <item>TNT Express Cambodia</item>
+        <item>Kerry Express Cambodia</item>
+    </string-array>
+
 </resources>

@@ -13,8 +13,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.shonlineshop.Adapter.CustomArrayAdapter;
 import com.example.shonlineshop.Adapter.ProductShoppingAdapter;
 import com.example.shonlineshop.Domain.ShoppingDomain;
 import com.example.shonlineshop.R;
@@ -68,5 +70,12 @@ public class ShoppingCartFragment extends Fragment {
         recyclerViewShopping.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
         adapterShopping = new ProductShoppingAdapter(shoppingDomains);
         recyclerViewShopping.setAdapter(adapterShopping);
+
+        Spinner deliverySpinner = rootView.findViewById(R.id.delivery_spinner);
+
+        String[] deliveryOptions = getResources().getStringArray(R.array.delivery);
+
+        CustomArrayAdapter adapter = new CustomArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, deliveryOptions);
+        deliverySpinner.setAdapter(adapter);
     }
 }
