@@ -58,7 +58,7 @@ public class StickyPaperWallCateActivity extends AppCompatActivity {
         ImageView backButton = findViewById(R.id.BackButton);
         backButton.setOnClickListener(view -> onBackPressed());
 
-        makeApiRequest("home");
+        makeApiRequest("Sticky Paper Wall");
     }
 
     private void openDetailView(ActivityDomain activityDomain) {
@@ -145,7 +145,7 @@ public class StickyPaperWallCateActivity extends AppCompatActivity {
         isGridLayout = !isGridLayout;
 
         // Fetch data from API based on the selected layout manager type
-        makeApiRequest("home");
+        makeApiRequest("Sticky Paper Wall");
     }
     @Override
     public void onBackPressed() {

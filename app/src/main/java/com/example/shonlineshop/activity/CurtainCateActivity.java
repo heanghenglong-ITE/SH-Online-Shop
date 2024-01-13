@@ -56,7 +56,7 @@ public class CurtainCateActivity extends AppCompatActivity {
         ImageView backButton = findViewById(R.id.BackButton);
         backButton.setOnClickListener(view -> onBackPressed());
 
-        makeApiRequest("home");
+        makeApiRequest("Curtain");
     }
 
     private void openDetailView(ActivityDomain activityDomain) {
@@ -143,7 +143,7 @@ public class CurtainCateActivity extends AppCompatActivity {
         isGridLayout = !isGridLayout;
 
         // Fetch data from API based on the selected layout manager type
-        makeApiRequest("home");
+        makeApiRequest("Curtain");
     }
     @Override
     public void onBackPressed() {

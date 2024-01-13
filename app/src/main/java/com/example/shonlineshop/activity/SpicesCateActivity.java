@@ -57,7 +57,7 @@ public class SpicesCateActivity extends AppCompatActivity {
         ImageView backButton = findViewById(R.id.BackButton);
         backButton.setOnClickListener(view -> onBackPressed());
 
-        makeApiRequest("home");
+        makeApiRequest("Spices");
     }
 
     private void openDetailView(ActivityDomain activityDomain) {
@@ -144,7 +144,7 @@ public class SpicesCateActivity extends AppCompatActivity {
         isGridLayout = !isGridLayout;
 
         // Fetch data from API based on the selected layout manager type
-        makeApiRequest("home");
+        makeApiRequest("Spices");
     }
     @Override
     public void onBackPressed() {

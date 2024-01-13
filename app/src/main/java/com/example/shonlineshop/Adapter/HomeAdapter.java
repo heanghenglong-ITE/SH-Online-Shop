@@ -46,7 +46,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
         Picasso.get()
                 .load(activityDomain.getImageUrl())
                 .placeholder(R.drawable.profile) // Placeholder image while loading
-                .error(R.drawable.cambodian) // Error image if the loading fails
+                .error(R.drawable.profile) // Error image if the loading fails
                 .into(holder.imageCate, new Callback() {
                     @Override
                     public void onSuccess() {
