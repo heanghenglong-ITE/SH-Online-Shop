@@ -15,6 +15,7 @@ import com.example.shonlineshop.R;
 import com.example.shonlineshop.activity.AboutUsActivity;
 import com.example.shonlineshop.activity.AccountInformationActivity;
 import com.example.shonlineshop.activity.ContactUsActivity;
+import com.example.shonlineshop.activity.FavItemActivity;
 import com.example.shonlineshop.activity.LoginActivity;
 import com.example.shonlineshop.activity.OrderInformationActivity;
 import com.example.shonlineshop.databinding.FragmentAccountBinding;
@@ -53,7 +54,7 @@ public class AccountFragment extends Fragment {
         imageViewClickInterest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), AccountInformationActivity.class);
+                Intent intent = new Intent(getActivity(), FavItemActivity.class);
                 startActivity(intent);
             }
         });
