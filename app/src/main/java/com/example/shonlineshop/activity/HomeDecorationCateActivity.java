@@ -58,7 +58,7 @@ public class HomeDecorationCateActivity extends AppCompatActivity {
         ImageView backButton = findViewById(R.id.BackButton);
         backButton.setOnClickListener(view -> onBackPressed());
 
-        makeApiRequest("all");
+        makeApiRequest("Home Decoration");
     }
 
     private void openDetailView(ActivityDomain activityDomain) {
@@ -145,7 +145,7 @@ public class HomeDecorationCateActivity extends AppCompatActivity {
         isGridLayout = !isGridLayout;
 
         // Fetch data from API based on the selected layout manager type
-        makeApiRequest("all");
+        makeApiRequest("Home Decoration");
     }
     @Override
     public void onBackPressed() {
