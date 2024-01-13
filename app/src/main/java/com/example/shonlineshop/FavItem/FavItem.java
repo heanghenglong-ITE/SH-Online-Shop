@@ -1,4 +1,4 @@
-package com.example.shonlineshop;
+package com.example.shonlineshop.FavItem;
 
 public class FavItem {
 

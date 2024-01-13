@@ -1,4 +1,4 @@
-package com.example.shonlineshop;
+package com.example.shonlineshop.FavItem;
 
 import android.content.ContentValues;
 import android.content.Context;

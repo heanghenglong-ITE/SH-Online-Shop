@@ -37,7 +37,6 @@ public class PaymentMethodActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Toast.makeText(this,"Back to Payment", Toast.LENGTH_SHORT).show();
         super.onBackPressed();
     }
 

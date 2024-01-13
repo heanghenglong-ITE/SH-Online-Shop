@@ -7,6 +7,7 @@
     import android.view.View;
     import android.view.ViewGroup;
     import android.widget.ImageView;
+    import android.widget.RelativeLayout;
     import android.widget.Toast;
 
     import androidx.annotation.NonNull;
@@ -21,6 +22,7 @@
     import com.example.shonlineshop.R;
     import com.example.shonlineshop.activity.CategoriesActivity;
     import com.example.shonlineshop.activity.DetailActivity;
+    import com.example.shonlineshop.activity.FavItemActivity;
     import com.example.shonlineshop.api.ApiService;
 
     import java.util.ArrayList;
@@ -67,11 +69,18 @@
             viewPager.setAdapter(viewPagerAdapter);
 
             ImageView btnCate = rootView.findViewById(R.id.btnCate);
+            RelativeLayout favClcik = rootView.findViewById(R.id.RelaFavorit);
             btnCate.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     // Handle button click, navigate to CategoriesActivity
                     navigateToCategoriesActivity();
+                }
+            });
+            favClcik.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    favoriteClick();
                 }
             });
 
@@ -82,6 +91,10 @@
         }
         private void navigateToCategoriesActivity() {
             Intent intent = new Intent(getActivity(), CategoriesActivity.class);
+            startActivity(intent);
+        }
+        private void favoriteClick(){
+            Intent intent = new Intent(getActivity(), FavItemActivity.class);
             startActivity(intent);
         }
 

@@ -52,7 +52,6 @@ public class ContactUsActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        Toast.makeText(this,"Back to Account", Toast.LENGTH_SHORT).show();
         super.onBackPressed();
     }
     private void openFacebook(){

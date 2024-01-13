@@ -12,8 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.shonlineshop.FavDB;
-import com.example.shonlineshop.FavItem;
+import com.example.shonlineshop.FavItem.FavDB;
+import com.example.shonlineshop.FavItem.FavItem;
 import com.example.shonlineshop.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

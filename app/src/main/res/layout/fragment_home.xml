@@ -80,11 +80,13 @@
                     android:layout_height="60dp"
                     android:layout_centerInParent="true"
                     android:background="@drawable/btn_cat_background" />
+
                 <ImageView
+                    android:id="@+id/favorite_click"
                     android:layout_width="35dp"
                     android:layout_height="30dp"
                     android:layout_centerInParent="true"
-                    android:background="@drawable/img_15"/>
+                    android:background="@drawable/img_15" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -173,13 +175,17 @@
                 android:id="@+id/RecyclerView2"
                 android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/textsales"
                 />
+
         </RelativeLayout>
 
+
+
     </RelativeLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

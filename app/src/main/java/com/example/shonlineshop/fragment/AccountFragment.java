@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.example.shonlineshop.R;
 import com.example.shonlineshop.activity.AboutUsActivity;
@@ -30,12 +32,12 @@ public class AccountFragment extends Fragment {
         binding = FragmentAccountBinding.inflate(inflater, container, false);
         View rootView = inflater.inflate(R.layout.fragment_account, container, false);
 
-        ImageView imageViewClickOrder = rootView.findViewById(R.id.order_click);
-        ImageView imageViewClickAccInfo = rootView.findViewById(R.id.account_click);
-        ImageView imageViewClickInterest = rootView.findViewById(R.id.interest_click);
-        ImageView imageViewClickContact = rootView.findViewById(R.id.contact_click);
-        ImageView imageViewClickAbout = rootView.findViewById(R.id.about_click);
-        ImageView imageViewClickLogout = rootView.findViewById(R.id.logout_click);
+        RelativeLayout imageViewClickOrder = rootView.findViewById(R.id.order_click_re);
+        RelativeLayout imageViewClickAccInfo = rootView.findViewById(R.id.acc_click_re);
+        RelativeLayout imageViewClickInterest = rootView.findViewById(R.id.fav_clcik_re);
+        RelativeLayout imageViewClickContact = rootView.findViewById(R.id.contact_clcik_re);
+        RelativeLayout imageViewClickAbout = rootView.findViewById(R.id.about_click_re);
+        RelativeLayout imageViewClickLogout = rootView.findViewById(R.id.logout_click_re);
 
         imageViewClickOrder.setOnClickListener(new View.OnClickListener() {
             @Override
