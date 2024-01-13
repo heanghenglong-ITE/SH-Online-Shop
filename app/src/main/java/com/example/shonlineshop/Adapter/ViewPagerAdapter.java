@@ -99,7 +99,9 @@ public class ViewPagerAdapter extends PagerAdapter {
             intent.putExtra("itemId", currentItem.getId());  // Use currentItem instead of activityDomain
             intent.putExtra("itemName", currentItem.getName());  // Use currentItem instead of activityDomain
             intent.putExtra("imageUrl", currentItem.getImageUrl());  // Use currentItem instead of activityDomain
-            intent.putExtra("itemPrice", currentItem.getPrice());  // Use currentItem instead of activityDomain
+            intent.putExtra("itemPrice", currentItem.getPrice());
+            intent.putExtra("itemSize", currentItem.getSize());
+            intent.putExtra("itemDescription", currentItem.getDescription());// Use currentItem instead of activityDomain
             // Add any other data you want to pass to the detail activity
             context.startActivity(intent);
         });

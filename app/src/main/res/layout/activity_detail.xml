@@ -112,17 +112,33 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp"/>
-
-                <TextView
-                    android:id="@+id/TextQuantity"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
+                <RelativeLayout
+                    android:id="@+id/rela6"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
                     android:layout_toEndOf="@id/Text2"
-                    android:text="20$"
-                    android:textColor="@color/blue"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/background1">
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="5dp"
+                        android:text="1"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/arrow_down" />
+                </RelativeLayout>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -145,16 +161,34 @@
                     android:textStyle="bold"
                     android:textSize="18sp"/>
 
-                <TextView
-                    android:id="@+id/TextDelivery"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/rela7"
+                    android:layout_width="95dp"
+                    android:layout_height="25dp"
                     android:layout_centerInParent="true"
                     android:layout_toEndOf="@id/Text3"
-                    android:text="20$"
-                    android:textColor="@color/blue"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:background="@drawable/background2">
+
+                    <TextView
+                        android:id="@+id/text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="8dp"
+                        android:text="Cambodia"
+                        android:textColor="#2C3E50"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/arrow_down" />
+                </RelativeLayout>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -215,7 +249,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/Text5"
                     android:textSize="18sp"
-                    android:maxLines="3"
+                    android:maxLines="2"
                     android:ellipsize="end"
                     android:text="Your initial text here"/>
                 <Button
