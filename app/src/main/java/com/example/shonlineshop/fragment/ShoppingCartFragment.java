@@ -66,7 +66,7 @@ public class ShoppingCartFragment extends Fragment {
         shoppingDomains.add(new ShoppingDomain("Curtain 2","USD 16","img2"));
         shoppingDomains.add(new ShoppingDomain("Curtain 3","USD 17","img3"));
 
-        recyclerViewShopping = rootView.findViewById(R.id.recyclerView);
+        recyclerViewShopping = rootView.findViewById(R.id.recyclerView_checkout);
         recyclerViewShopping.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
         adapterShopping = new ProductShoppingAdapter(shoppingDomains);
         recyclerViewShopping.setAdapter(adapterShopping);

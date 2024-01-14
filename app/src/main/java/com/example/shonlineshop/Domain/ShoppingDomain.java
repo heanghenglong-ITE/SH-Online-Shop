@@ -1,10 +1,13 @@
 package com.example.shonlineshop.Domain;
 
-public class ShoppingDomain {
+import com.google.gson.annotations.SerializedName;
+
+public class ShoppingDomain implements java.io.Serializable{
 
     private String productName;
     private String productPrice;
 
+    @SerializedName("imageUrl")
     private String imageUrl;
 
     public ShoppingDomain(String productName, String productPrice, String imageUrl) {
